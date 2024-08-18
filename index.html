@@ -857,15 +857,15 @@
       
               <div class="input-wrapper">
                 <div class="icon-wrapper">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                  <select id="person" name="person" class="input-field" required>
-                    <option value="1-person">1 Person</option>
-                    <option value="2-person">2 Person</option>
-                    <option value="3-person">3 Person</option>
-                    <option value="4-person">4 Person</option>
-                    <option value="5-person">5 Person</option>
-                    <option value="6-person">6 Person</option>
-                    <option value="7-person">7 Person</option>
+                  <ion-icon name="car-outline" aria-hidden="true"></ion-icon>
+                  <select id="car" name="car" class="input-field" required>
+                    <option value="Toyota Innova Diesel">Toyota Innova Diesel</option>
+                    <option value="Toyota Innova TRD Diesel">Toyota Innova TRD Diesel</option>
+                    <option value="Toyota Fortuner GR">Toyota Fortuner GR</option>
+                    <option value="Toyota Innova Type G">Toyota Innova Type G</option>
+                    <option value="Toyota Innova Venturer">Toyota Innova Venturer</option>
+                    <option value="Toyota Hiace Luxury">Toyota Hiace Luxury</option>
+                    <option value="Mercedes Benz Sprinter">Mercedes Benz Sprinter</option>
                   </select>
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
@@ -902,8 +902,8 @@
               <textarea id="message" name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
       
               <button type="button" class="btn btn-secondary" onclick="sendToWhatsApp()">
-                <span class="text text-1">Book A Table</span>
-                <span class="text text-2" aria-hidden="true">Book A Table</span>
+                <span class="text text-1">Book A Car</span>
+                <span class="text text-2" aria-hidden="true">Book A Car</span>
               </button>
       
             </form>
@@ -936,16 +936,16 @@
           // Ambil nilai dari form
           const name = document.getElementById("name").value;
           const phone = document.getElementById("phone").value;
-          const person = document.getElementById("person").value;
+          const car = document.getElementById("car").value;
           const date = document.getElementById("reservation-date").value;
           const time = document.getElementById("time").value;
           const message = document.getElementById("message").value;
       
           // Buat teks pesan untuk WhatsApp
-          const textMessage = `Halo, saya ingin melakukan reservasi:\n\n` +
+          const textMessage = `Halo, saya ingin melakukan reservasi mobil:\n\n` +
                               `Nama: ${name}\n` +
                               `Telepon: ${phone}\n` +
-                              `Jumlah orang: ${person}\n` +
+                              `Mobil: ${car}\n` +
                               `Tanggal: ${date}\n` +
                               `Waktu: ${time}\n` +
                               `Pesan: ${message}`;
@@ -957,6 +957,7 @@
           window.open(whatsappUrl, '_blank');
         }
       </script>
+      
       
 
 
